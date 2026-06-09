@@ -162,6 +162,28 @@ export default {
 
             return this.$axios.get(this.meta.url, { params }).then((response) => {
                 this.options = response.data.data;
+                // internal fix to show label of selected element if initial selection
+                // does not appear in intial options
+                const applicableDictionaries = [
+                  'events',
+                  'books',
+                  'restaurants',
+                  'movies',
+                  'festivals',
+                  'event_locations',
+                  'festivals_sperrfrist_ignoriert',
+                  'eyepin_contacts',
+                  'newsletters'
+                ];
+                if(this.selectedOptions[0] && applicableDictionaries.includes(this.config.dictionary.type))
+                {
+                  const label = this.selectedOptions[0].label;
+                  const value = this.selectedOptions[0].value;
+                  if(this.options[value] === undefined)
+                  {
+                    this.options[value] = label;
+                  }
+                }
                 return Promise.resolve(response);
             });
         },

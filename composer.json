@@ -70,19 +70,19 @@
     "extra": {
         "download-dist": [
             {
-                "url": "https://github.com/statamic/cms/releases/download/{$version}/dist.tar.gz",
+                "url": "https://github.com/faltjo/statamic-cms/releases/download/{$version}/dist.tar.gz",
                 "path": "resources/dist"
             },
             {
-                "url": "https://github.com/statamic/cms/releases/download/{$version}/dist-dev.tar.gz",
+                "url": "https://github.com/faltjo/statamic-cms/releases/download/{$version}/dist-dev.tar.gz",
                 "path": "resources/dist-dev"
             },
             {
-                "url": "https://github.com/statamic/cms/releases/download/{$version}/dist-frontend.tar.gz",
+                "url": "https://github.com/faltjo/statamic-cms/releases/download/{$version}/dist-frontend.tar.gz",
                 "path": "resources/dist-frontend"
             },
             {
-                "url": "https://github.com/statamic/cms/releases/download/{$version}/dist-package.tar.gz",
+                "url": "https://github.com/faltjo/statamic-cms/releases/download/{$version}/dist-package.tar.gz",
                 "path": "resources/dist-package"
             }
         ],
